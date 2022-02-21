@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    
+    <h2>Student Details</h2>
+
+    <input type="text" id="myinput" onkeyup="myFunction()" placeholder="Search for names...."  title="Type in a name">
+    
+
+    <table id="myTable">
+        <tr class="header">
+            <th style="width: 60%;">Customers Name</th>
+            <th style="width: 56%;">Country</th>
+         </tr>
+         
+         <tr>
+        <td>Virat</td>
+        <td>India</td>
+    </tr>
+    <tr>
+        <td>Smith</td>
+        <td>France</td>
+    </tr>
+        <tr>
+            <td>Morgan</td>
+            <td>UK</td>
+        </tr>
+        <tr>
+            <td>Joe</td>
+            <td>Italy</td>
+        </tr>
+        <tr>
+            <td>Mark</td>
+            <td>Canada</td>
+        </tr>
+        <tr>
+            <td>Alok</td>
+            <td>Germany</td>
+        </tr>
+        <tr>
+            <td>John</td>
+            <td>Sweden</td>
+        </tr>
+        <tr>
+            <td>Morgan</td>
+            <td>England</td>
+        </tr>
+        <tr>
+            <td>Stokes</td>
+            <td>USA</td>
+        </tr>
+        <tr>
+            <td>Kane</td>
+            <td>New zealand</td>
+        </tr>
+        <tr>
+            <td>Morkel</td>
+            <td>UAE</td>
+        </tr>
+        <tr>
+            <td>Cummins</td>
+            <td>America</td>
+        </tr>
+
+    </table>
+
+       <script>
+        
+        function myFunction() {
+    var input,filter,table,tr,td,i,txtValue;
+    input= document.getElementById("my input");
+    filter=input.value.toUpperCase();
+    table=document.getElementById("my table");
+    tr=table.getElementByIdByTagName("tr");
+    for(i=0;i <tr.length; i++)  {
+        td = tr[i].getElementByIdByTagName("td")[0];
+        if(td) {
+            txtvalue = td.textContent || td.innerText;
+            if (txtValue.toUppercase().indexof(filter)  > -1) {
+                tr[i].style.display = "";
+            } else {
+                tr[i].style.display = "none";
+
+            }
+        }
+    }
+}
+  
+       </script>
+
+
+</body>
+</html>
